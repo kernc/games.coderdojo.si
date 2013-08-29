@@ -1,0 +1,131 @@
+---
+categories:
+  - name: programming
+    desc: Playing these games might just make you a better computer programmer.
+    games:
+      - name: light-Bot 2
+        desc: >
+          Program the robot and light up the fields. This is a much enhanced
+          sequel to the [original](#programming/light-bot-1). If you only play
+          one version, play this one! `;)`
+      - name: Jahooma's LogicBox
+        height: 600
+        desc: >
+          Jahooma's LogicBox effectively teaches the essence of **functional**,
+          **modular design** of algorithms.
+      - name: RoboZZle
+        href: "http://robozzle.com/js/"
+        desc: >
+          RoboZZle, with its user-submitted puzzles, must be one of the hardest
+          puzzle games ever. Unfortunately, the rich interface is locked into
+          Silverlight.
+      - name: Frame Protector SYNC
+        desc: >
+          F.P.S. is a programming game similar to [light-Bot](#programming/light-bot-2),
+          but with **more options**, more contrasting colors, **more levels**,
+          and more **relevant** (programming) **terminology**.
+      - name: light-Bot 1
+        desc: >
+          The original light-Bot by Coolio Niato, since superseeded by
+          [light-Bot 2](#programming/light-bot-2). Actually, the controls are
+          a bit clumsy with this one. If you only ever play one version of
+          light-Bot, play the sequel. But Coolio, overall great stuff, man!
+  - name: engineering
+    desc: Engineer your way through these puzzle games.
+    games:
+      - name: Codex of Alchemical Engineering
+      - name: "Codex 2: Magnum Opus Challenge"
+      - name: Manufactoria
+      - name: Fantastic Contraption
+        swfhref: http://fantasticcontraption.com/game/Contraption.swf
+      - name: Electric Box 2
+      - name: "KOHCTPYKTOP: Engineer of the People"
+        height: 810
+  - name: touch-typing
+    desc: Become one with your keyboard, reach 110 WPM.
+    games: []
+  - name: miscellaneous
+    desc: Improve your abilities in various other fields.
+    games:
+      - name: Check Flag
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Educative-Games.TK — Learn through play</title>
+<meta name="description" content=""/>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.min.css"/>
+<link rel="stylesheet" href="/style.css"/>
+<link rel="shortcut icon" href="/favicon.ico">
+<style></style>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2/swfobject.js"></script>
+<script src="/script.js"></script>
+<script></script>
+</head>
+<body>
+
+<header>
+  <h1><a href="/">Educative-Games<img src="images/dot-tk.png" alt=".tk"/></a></h1>
+  <span>Free-for-all educational <b><i>games</i> you wish <i>the kids</i> to play</b> in order to <b>learn more about</b> ...</span>
+</header>
+
+<div id="menu">
+<ul id="nav">
+{% for category in page.categories %}
+<li><a href="#{{ category.name | handleize }}">{{ category.name | capitalize }}</a>
+    <div class="submenu">
+      <span class="shortdesc">{{ category.desc }}</span>
+      <ul>
+{% for game in category.games %}{% capture slug %}{{ game.name | downcase | remove: "'" | remove: ':' | replace: ' ', '-' }}{% endcapture %}
+<li><a href="{% if game.href %}{{ game.href }}{% else %}#{{ category.name | handleize }}/{{ slug }}{% endif %}" style="background:url('images/{{ slug }}.png')"><span>{{ game.name }}</span></a></li>{% endfor %}
+      </ul>
+    </div>
+</li>
+{% endfor %}
+<li style="float:right"><a href="#about">About</a>
+</li>
+</ul>
+</div>
+
+<section class="game about">
+  <h3 id="about">About this site</h3>
+  <p>I was gathering up useful resources for <a href="http://www.coderdojo.si/">Slovenian</a> <a href="http://en.wikipedia.org/wiki/CoderDojo">CoderDojo</a> course,
+  and I stumbled upon <a href="#programming/light-bot-2">light-Bot 2</a> and <a href="http://www.robozzle.com">RoboZZle</a> at
+  <b>HappyNerds' wonderful collection of <a href="http://happynerds.net/view/browser">programming resources for kids</a></b>.</p>
+  <p>One game led to the other, and — after a few days of ecstatic playing — I figured I would make the job easier for
+  others pursuing the same task – searching for <b>games with real educational value</b>
+  that help one <b>develop not only the interactive problem-solving skills</b>,
+  but also create very real <b>hands-on experience</b> or depth of <b>understanding
+  of a particular real-world field</b>. And for watchful parents and their likes.
+  Gathered are, incidently, some of the <b>best puzzle games ever created</b>.</p>
+  <p style="font-weight:bold;color:grey;">With that regard, I have a <b>challenge for you</b>. Go search for other
+  <a href="http://www.google.com/search?q=educational+games">"educational games"</a>
+  online and compare your findings with the games listed here. You might find
+  the state of affairs is quite sad, really.</p>
+  <p>Find the games in the menu above. Most games require Adobe Flash, some are
+  links to their respective websites. <noscript>The page requires JavaScript enabled.</noscript></p>
+  <p>If you <b>have a suggestion</b> for an educative game or a new category, <b>drop me a line</b> on <u style="white-space:nowrap;">kernc<i></i>ece+edu<i></i>games<i></i>/on\<i></i>gmail</u>,
+  or better yet, if you wish, just add the new game yourself via a "pull request" on <a href="http://github.com/kernc/educative-games.tk">GitHub</a>. :)
+
+  <!--script id='flattrbtn'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=kernc&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('flattrbtn');</script-->
+</section>
+
+{% for category in page.categories %}{% for game in category.games %}{% unless game.href %}{% capture slug %}{{ game.name | downcase | remove: "'" | remove: ':' | replace: ' ', '-' }}{% endcapture %}
+<section class="game">
+  <h3 id="{{ category.name | handleize }}/{{ slug }}">{{ game.name }}</h3>
+  <p>{{ game.desc | markdownify }}</p>
+  <div id="{{ slug }}-swf"></div>
+  <script> embedSWF('{% if game.swfhref %}{{ game.swfhref }}{% else %}flash/{{ slug }}.swf{% endif %}', '{{ slug }}-swf', '{{ game.height }}'); </script>
+</section>
+{% endunless %}{% endfor %}{% endfor %}
+
+<footer style="text-align:center;">
+  <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="CC BY-NC-SA" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
+  <a href="http://www.kongregate.com"><img alt="Kongregate" src="http://cdn1.kongcdn.com/images/sharedassets/badge88x31red.gif"/></a>
+  <a href="http://armorgames.com" title="Sponsor of light-Bot game"><img alt="ArmorGames" src="http://armorgames.com/files/banners/banner-20.jpg"/></a>
+</footer>
+</body>
+</html>
