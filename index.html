@@ -4,18 +4,25 @@ categories:
     desc: Playing these games might just make you a better computer programmer.
     games:
       - name: light-Bot 2
-        desc: >
+        desc: |
           Program the robot and light up the fields. This is a much enhanced
-          sequel to the [original](http://armorgames.com/play/2205/light-bot)
-          that now supports conditional 'statements', full recursion, and doesn't
+          sequel (to the [original](http://armorgames.com/play/2205/light-bot))
+          that now supports _conditional statements_, full _recursion_, and doesn't
           suffer the clumsy controls like the first version...
+          
           If you only play one game here, play this one!
           Made by Coolio Niato — Great stuff, man! `;)`
       - name: Jahooma's LogicBox
         height: 600
-        desc: >
-          Jahooma's LogicBox effectively teaches the essence of **functional**,
-          **modular design** of algorithms.
+        desc: |
+          Jahooma's LogicBox is a game for programmers. It effectively
+          teaches the essence of **functional** and **modular design
+          of algorithms and procedures**, with an added aspect of test-driven development
+          (you are given several tests that must all pass).
+
+          The problems are highly practical — low level string manipulation.
+          With only 19 levels, the game runs a little short, but there
+          is no shortage of educational fun to be had! Don't skip this one.
       - name: RoboZZle
         href: "http://robozzle.com/js/"
         desc: >
@@ -23,15 +30,37 @@ categories:
           puzzle games ever. Unfortunately, the rich interface is locked into
           Silverlight.
       - name: Frame Protector SYNC
-        desc: >
+        desc: |
           F.P.S. is a programming game similar to [light-Bot](#programming/light-bot-2),
           but with **more options**, more contrasting colors, **more levels**,
           and more **relevant** (programming) **terminology**.
+
+          Dive in the world of Hackers and help SYNC fix the hipster vandalism
+          of The Dead Pixel Society.
   - name: engineering
     desc: Engineer your way through these puzzle games.
     games:
       - name: Codex of Alchemical Engineering
+        desc: |
+          Truly a game for engineers. Your goal is to **build machines out of
+          programmable mechanical arms** that move and transform basic elements
+          to create compounds as required to pass each level.
+
+          The game is a little short on introduction, but when everything "clicks,"
+          The Codex of Alchemical Engineering might just become one of the most
+          captivating logic puzzle experiences you've encountered in years.
+
+          When you complete it, there is a (warning: very challenging)
+          [sequel](#programming/codex-2-magnum-opus-challenge) available.
       - name: "Codex 2: Magnum Opus Challenge"
+        desc: |
+          This is a sequel to the original [Codex of Alchemical Engineering](#programming/codex-of-alchemical-enginering).
+          It features original puzzles made by the author and game fans, but beware,
+          these puzzles are extremely challenging; each one will likely take
+          you hours to complete, depending on how smart you are.
+
+          If you like these kinds of games, you may want to go to your
+          local university and get an engineering or computer science degree. `;)`
       - name: Manufactoria
       - name: Fantastic Contraption 2
       - name: Electric Box 2
@@ -81,12 +110,12 @@ categories:
 <div id="menu">
 <ul id="nav">
 {% for category in page.categories %}
-<li><a href="#{{ category.name | handleize }}">{{ category.name | capitalize }}</a>
+<li><a href="#{{ category.name | downcase }}">{{ category.name | capitalize }}</a>
     <div class="submenu">
       <span class="shortdesc">{{ category.desc }}</span>
       <ul>
 {% for game in category.games %}{% capture slug %}{{ game.name | downcase | remove: "'" | remove: ':' | replace: ' ', '-' }}{% endcapture %}
-<li><a href="{% if game.href %}{{ game.href }}{% else %}#{{ category.name | handleize }}/{{ slug }}{% endif %}" style="background:url('images/{{ slug }}.png')"><span>{{ game.name }}</span></a></li>{% endfor %}
+<li><a href="{% if game.href %}{{ game.href }}{% else %}#{{ category.name | downcase }}/{{ slug }}{% endif %}" style="background:url('images/{{ slug }}.png')"><span>{{ game.name }}</span></a></li>{% endfor %}
       </ul>
     </div>
 </li>
@@ -121,10 +150,17 @@ categories:
 
 {% for category in page.categories %}{% for game in category.games %}{% unless game.href %}{% capture slug %}{{ game.name | downcase | remove: "'" | remove: ':' | replace: ' ', '-' }}{% endcapture %}
 <section class="game">
-  <h3 id="{{ category.name | handleize }}/{{ slug }}">{{ game.name }}</h3>
+  <h3 id="{{ category.name | downcase }}/{{ slug }}">{{ game.name }}</h3>
   <p>{{ game.desc | markdownify }}</p>
   <div id="{{ slug }}-swf"></div>
   <script> embedSWF('{% if game.swfhref %}{{ game.swfhref }}{% else %}flash/{{ slug }}.swf{% endif %}', '{{ slug }}-swf', '{{ game.height }}'); </script>
+  <!--script src="https://apis.google.com/js/plusone.js"></script>
+  <div class="g-comments"
+      data-href="/#{{ category.name | downcase }}/{{ slug }}"
+      data-width="400"
+      data-first_party_property="BLOGGER"
+      data-view_type="FILTERED_POSTMOD">
+  </div-->
 </section>
 {% endunless %}{% endfor %}{% endfor %}
 
@@ -133,5 +169,15 @@ categories:
   <a href="http://www.kongregate.com"><img alt="Kongregate" src="http://cdn1.kongcdn.com/images/sharedassets/badge88x31red.gif"/></a>
   <a href="http://armorgames.com" title="Sponsor of light-Bot game"><img alt="ArmorGames" src="http://cache.armorgames.com/files/banners/banner-20.jpg"/></a>
 </footer>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43663477-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 </body>
 </html>
