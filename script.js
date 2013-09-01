@@ -1,8 +1,8 @@
 $(document).ready(function() {
   hide_all();
   var current = $(window.location.hash.replace('/', '\\/'));
-  if (current.length)
-    current.parent().show();
+  if (current.length > 0)
+    game('#' + current.attr('id'));
   else game('#about');
   
   var external_links = $('#nav a[href^="http"]');
@@ -26,6 +26,7 @@ function game(id) {
   hide_all();
   $(id.replace('/', '\\/')).parent().show();
   window.location.assign(id);
+  //~ _gaq.push(['_trackPageview', '/' + id]);
 }
 
 function embedSWF (swf, id, height) {
@@ -34,5 +35,6 @@ function embedSWF (swf, id, height) {
 }
 
 window.onhashchange = function() {
-  game(window.location.hash);
+  if ($(window.location.hash.replace('/', '\\/')).length > 0)
+    game(window.location.hash);
 }
