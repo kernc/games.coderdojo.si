@@ -33,7 +33,9 @@ function game(id) {
   var info = $(section).children('.game-info');
   info.html('<div id="swfplayer"></div>')
   embedSWF(info.data('swf'), info.data('height'));
-  // TODO jQuery scroll
+  $('body').animate({
+    scrollTop: $(section).offset().top
+  }, 1000);
   window.location.assign(id);
   _gaq.push(['_trackPageview', '/' + id]);
   info.append('<div class="sharing"><div class="fb-like" data-href="' + window.location + '" data-width="120" data-send="false" data-layout="button_count" data-show-faces="false" data-ref="site-undervid"></div> <div class="g-plusone" data-size="medium" data-width="120"/></div></div>')
