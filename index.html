@@ -175,6 +175,7 @@ categories:
   or better yet, if you wish, just add the new game yourself via a "pull request" on <a href="http://github.com/kernc/educative-games.tk">GitHub</a>. <kbd>:)</kbd>
 
   <!--script id='flattrbtn'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=kernc&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('flattrbtn');</script-->
+   <section class="game-info"></section>
 </section>
 
 {% for category in page.categories %}{% for game in category.games %}{% unless game.href %}{% capture slug %}{{ game.name | downcase | remove: "'" | remove: ':' | replace: ' ', '-' }}{% endcapture %}
@@ -182,8 +183,7 @@ categories:
   <h3 id="{{ category.name | downcase }}/{{ slug }}">{{ game.name }}</h3>
   {{ game.desc | markdownify }}
 
-  <section class="game-info" data-slug="{{ slug }}"
-                             data-swf="{% if game.swfhref %}{{ game.swfhref }}{% else %}flash/{{ slug }}.swf{% endif %}"
+  <section class="game-info" data-swf="{% if game.swfhref %}{{ game.swfhref }}{% else %}flash/{{ slug }}.swf{% endif %}"
                              data-height="{{ game.height }}"></section>
 </section>
 {% endunless %}{% endfor %}{% endfor %}
@@ -194,7 +194,7 @@ categories:
   <a href="http://armorgames.com" title="Sponsor of light-Bot game"><img alt="ArmorGames" src="http://cache.armorgames.com/files/banners/banner-20.jpg"/></a>
 </footer>
 
-<script src="https://apis.google.com/js/plusone.js">{parsetags: 'explicit'}</script>
+<script src="https://apis.google.com/js/plusone.js"></script>
 <script src="https://connect.facebook.net/en_US/all.js#xfbml=1&appId=151440601730621"></script>
 <script>
   var _gaq = _gaq || [];

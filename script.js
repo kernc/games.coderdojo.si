@@ -32,9 +32,11 @@ function game(id) {
   var info = $(section).children('.game-info');
   if (info.length > 0) {
     _gaq.push(['_trackPageview', '/' + id]);
-    info.html('<div id="swfplayer"></div>')
-    embedSWF(info.data('swf'), info.data('height'));
-    $('html,body').animate({scrollTop: $(section).offset().top}, 1000);
+    if (info.data('swf')) {
+      info.html('<div id="swfplayer"></div>')
+      embedSWF(info.data('swf'), info.data('height'));
+      $('html,body').animate({scrollTop: $(section).offset().top}, 1000);
+    }
     info.append('<div class="sharing"><div class="fb-like" data-href="' + window.location + '" data-width="120" data-send="false" data-layout="button_count" data-show-faces="false" data-ref="site-undervid"></div> <div class="g-plusone" data-size="medium" data-width="120"/></div></div>')
     info.append('<div class="comments left"><div id="g-comments"></div></div> \
     <div class="comments right"> \
@@ -48,7 +50,7 @@ function game(id) {
     });
   }
   gapi.plusone.go();
-  FB.XFBML.parse();
+  FB.XFBML.parse(section[0]);
 }
 
 function embedSWF (swf, height) {
