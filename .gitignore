@@ -1,0 +1,3 @@
+# the products of `jekyll build` or `jekyll --server`
+build/*
+_site/*
