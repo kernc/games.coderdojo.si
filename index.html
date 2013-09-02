@@ -111,21 +111,19 @@ categories:
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.min.css"/>
 <link rel="stylesheet" href="style.css"/>
 <link rel="shortcut icon" href="favicon.ico">
-<style></style>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/swfobject/2/swfobject.js"></script>
 <script src="script.js"></script>
 <meta property="fb:app_id" content="151440601730621"/>
-<script></script>
 </head>
 <body>
 <div id="fb-root"></div>
 <header>
   <h1><a href="/">Educative-Games<img src="images/dot-tk.png" alt=".tk"/></a></h1>
-  <span>Free-for-all educational <b><i>games</i> you wish <i>the kids</i> to play</b> in order to <b>learn more about</b> ...</span>
+  <h2>Free-for-all <b><em>educative games</em> you wish <em>the kids</em> to play</b> in order to <b><em>learn</em> more about</b> ...</h2>
   <div class="sharing">
     <div class="fb-like"   data-width="120" data-href="http://educative-games.tk/" data-layout="button_count" data-show-faces="false" data-send="false" data-ref="site-title"></div>
-    <div class="g-plusone" data-width="120" data-size="medium"></div>
+    <div class="g-plusone" data-width="120" data-href="http://educative-games.tk/" data-size="medium"></div>
   </div>
 </header>
 
@@ -187,24 +185,6 @@ categories:
   <section class="game-info" data-slug="{{ slug }}"
                              data-swf="{% if game.swfhref %}{{ game.swfhref }}{% else %}flash/{{ slug }}.swf{% endif %}"
                              data-height="{{ game.height }}"></section>
-  
-<!--
-  <div id="{{ slug }}-swf"></div>
-  <script> embedSWF('{% if game.swfhref %}{{ game.swfhref }}{% else %}flash/{{ slug }}.swf{% endif %}', '{{ slug }}-swf', '{{ game.height }}'); </script>
--->
-  
-  <!--div class="comments left">
-    <div class="g-comments"
-        data-href="/#{{ category.name | downcase }}/{{ slug }}"
-        data-width="390"
-        data-style="float:left"
-        data-first_party_property="BLOGGER"
-        data-view_type="FILTERED_POSTMOD"></div>
-  </div>
-  <div class="comments right">
-    <div class="fb-comments" data-href="/#{{ category.name | downcase }}/{{ slug }}" data-width="390"></div>
-  </div>
-  <div class="clear"/-->
 </section>
 {% endunless %}{% endfor %}{% endfor %}
 

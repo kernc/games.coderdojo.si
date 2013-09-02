@@ -17,33 +17,34 @@ body {
 header {
   background:#050;
 }
-header h1 img {
+header > h1 img {
   margin-left: 10px;
 }
-header h1 {
+header > h1 {
   padding:10px 0px 0px 20px;
   margin:0;
   font-size:4em;
   font-family:khand,cursive;
   letter-spacing:5px;
 }
-header h1 a {
+header > h1 a {
   color:#8e8;
   text-decoration:none;
 }
-header span {
+header > h2 {
   margin-left:5%;
   margin-top:-10px;
   color:#7d0;
   font-family:sans-serif;
   font-size:.9em;
+  font-weight:normal;
   letter-spacing:1px;
-  padding-bottom:10px;
+  padding-bottom:0px;
   display:block;
 }
-header .sharing {
+header > .sharing {
   width:700px;
-  padding-bottom:8px;
+  padding-bottom:10px;
 }
 
 
