@@ -1,9 +1,10 @@
 $(document).ready(function() {
   hide_all();
   var current = $(window.location.hash.replace('/', '\\/'));
-  if (current.length > 0)
-    game('#' + current.attr('id'));
-  else game('#about');
+  if (current.length > 0) {
+    window.location.assign('#' + current.attr('id'));
+    onhashchange();
+  } else window.location.assign('#about');
   
   var external_links = $('#nav a[href^="http"]');
   external_links.css('background-image', function (index, value) {
@@ -12,7 +13,7 @@ $(document).ready(function() {
   external_links.attr('target', '_blank');
   
   $('#nav a[href^="#"]').click(function() {
-    game($(this).attr('href'));
+    window.location.assign($(this).attr('href'));
     window.submenu = $(this).parents('.submenu');
     window.submenu.addClass('submenu-hide').removeClass('submenu');
     setTimeout(function() {
@@ -30,11 +31,10 @@ function game(id) {
   section.show();
   var info = $(section).children('.game-info');
   if (info.length > 0) {
+    _gaq.push(['_trackPageview', '/' + id]);
     info.html('<div id="swfplayer"></div>')
     embedSWF(info.data('swf'), info.data('height'));
-    $('body').animate({scrollTop: $(section).offset().top}, 1000);
-    window.location.assign(id);  // ?
-    _gaq.push(['_trackPageview', '/' + id]);
+    $('html,body').animate({scrollTop: $(section).offset().top}, 1000);
     info.append('<div class="sharing"><div class="fb-like" data-href="' + window.location + '" data-width="120" data-send="false" data-layout="button_count" data-show-faces="false" data-ref="site-undervid"></div> <div class="g-plusone" data-size="medium" data-width="120"/></div></div>')
     info.append('<div class="comments left"><div id="g-comments"></div></div> \
     <div class="comments right"> \
@@ -56,10 +56,7 @@ function embedSWF (swf, height) {
   swfobject.embedSWF(swf, 'swfplayer', 800, height, '11.0.0', false, {}, {wmode:'opaque', bgcolor:'#eeeeee', base:'flash/'}, {});
 }
 
-/* This, as is, runs game() twice (once on A-click and once for hash change).
- * Without it, manual URL location updates aren't honored.
- */
-//~ window.onhashchange = function() {
-  //~ if ($(window.location.hash.replace('/', '\\/')).length > 0)
-    //~ game(window.location.hash);
-//~ }
+window.onhashchange = function() {
+  if ($(window.location.hash.replace('/', '\\/')).length > 0)
+    game(window.location.hash);
+}
