@@ -21,9 +21,7 @@ $(document).ready(function() {
   });
 });
 function hide_all() {
-  $('section.game').hide();
-  $('section.game .game-info').html('');
-  
+  $('section.game').hide(0).children('.game-info').html('');
 }
 
 function game(id) {
@@ -31,24 +29,25 @@ function game(id) {
   var section = $(id.replace('/', '\\/')).parent();
   section.show();
   var info = $(section).children('.game-info');
-  info.html('<div id="swfplayer"></div>')
-  embedSWF(info.data('swf'), info.data('height'));
-  $('body').animate({
-    scrollTop: $(section).offset().top
-  }, 1000);
-  window.location.assign(id);
-  _gaq.push(['_trackPageview', '/' + id]);
-  info.append('<div class="sharing"><div class="fb-like" data-href="' + window.location + '" data-width="120" data-send="false" data-layout="button_count" data-show-faces="false" data-ref="site-undervid"></div> <div class="g-plusone" data-size="medium" data-width="120"/></div></div>')
-  info.append('<div class="comments left"><div id="g-comments"></div></div> \
-  <div class="comments right"> \
-    <div class="fb-comments" data-href="/' + id + '" data-width="390"></div> \
-  </div><div class="clear"/>');
-  gapi.comments.render('g-comments', {
-    href: window.location,
-    width: '390',
-    first_party_property: 'BLOGGER',
-    view_type: 'FILTERED_POSTMOD'
-  });
+  if (info.length > 0) {
+    info.html('<div id="swfplayer"></div>')
+    embedSWF(info.data('swf'), info.data('height'));
+    //$('body').animate({scrollTop: $(section).offset().top}, 1000);
+    //window.location.assign(id);
+    //alert(window.location);
+    _gaq.push(['_trackPageview', '/' + id]);
+    info.append('<div class="sharing"><div class="fb-like" data-href="' + window.location + '" data-width="120" data-send="false" data-layout="button_count" data-show-faces="false" data-ref="site-undervid"></div> <div class="g-plusone" data-size="medium" data-width="120"/></div></div>')
+    info.append('<div class="comments left"><div id="g-comments"></div></div> \
+    <div class="comments right"> \
+      <div class="fb-comments" data-href="/' + id + '" data-width="390"></div> \
+    </div><div class="clear"/>');
+    gapi.comments.render('g-comments', {
+      href: window.location,
+      width: '390',
+      first_party_property: 'BLOGGER',
+      view_type: 'FILTERED_POSTMOD'
+    });
+  }
   gapi.plusone.go();
   FB.XFBML.parse();
 }
