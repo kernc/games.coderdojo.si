@@ -6,12 +6,10 @@ categories:
       - name: light-Bot 2
         desc: |
           Program the robot and light up the fields. This is a much enhanced
-          sequel (to the [original](http://armorgames.com/play/2205/light-bot))
-          that now supports _conditional statements_, full _recursion_, and doesn't
-          suffer the clumsy controls like the first version...
+          sequel that now supports _conditional statements_, and it doesn't
+          suffer the clumsy controls like the [original](http://armorgames.com/play/2205/light-bot) version...
           
-          If you only play one game here, play this one!
-          Made by Coolio Niato — Great stuff, man! `;)`
+          If you only play one game here, play this one! `;)`
       - name: Jahooma's LogicBox
         height: 600
         desc: |
@@ -107,7 +105,7 @@ categories:
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Educative-Games.TK — Learn through play</title>
+<title>Educative-Games.tk — Learn through play</title>
 <meta name="description" content=""/>
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.min.css"/>
@@ -117,13 +115,18 @@ categories:
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/swfobject/2/swfobject.js"></script>
 <script src="script.js"></script>
+<meta property="fb:app_id" content="151440601730621"/>
 <script></script>
 </head>
 <body>
-
+<div id="fb-root"></div>
 <header>
   <h1><a href="/">Educative-Games<img src="images/dot-tk.png" alt=".tk"/></a></h1>
   <span>Free-for-all educational <b><i>games</i> you wish <i>the kids</i> to play</b> in order to <b>learn more about</b> ...</span>
+  <div class="sharing">
+    <div class="fb-like"   data-width="120" data-href="http://educative-games.tk/" data-layout="button_count" data-show-faces="false" data-send="false" data-ref="site-title"></div>
+    <div class="g-plusone" data-width="120" data-size="medium"></div>
+  </div>
 </header>
 
 <div id="menu">
@@ -161,17 +164,17 @@ categories:
   the state of affairs is <del>quite sad, really.</del><ins> I found some more
   sites that list more or less educative games of various fields. The more interesting
   of those should be gathered in the menu above, but the <b>interactive
-  story type games, suitable for even younger children</b>, can be also found here:
+  story type games, suitable for even younger children</b>, can also be found here:
   <ul>
   <li><a href="http://www.edheads.org/">http://www.edheads.org/</a></li>
   <li><a href="http://www.tryengineering.org/play.php">http://www.tryengineering.org/play.php</a></li>
   <li><a href="http://www.nobelprize.org/educational/">http://www.nobelprize.org/educational/</a></li>
-  <li></li>
+  <li><a href="http://engineering-games.net">http://engineering-games.net</a></li>
   </ul></ins></p>
   <p>Find the games in the menu above. Most games require Adobe Flash, some are
   links to their respective websites. <noscript>The page requires JavaScript enabled.</noscript></p>
-  <p>If you <b>have a suggestion</b> for an educative game or a new category, <b>drop me a line</b> on <u style="white-space:nowrap;">kernc<i></i>ece+edu<i></i>games<i></i>/on\<i></i>gmail</u>,
-  or better yet, if you wish, just add the new game yourself via a "pull request" on <a href="http://github.com/kernc/educative-games.tk">GitHub</a>. :)
+  <p>If you <b>have a suggestion</b> for an educative game or even a whole category, <b>drop me a line</b> on <u style="white-space:nowrap;">kernc<i></i>ece+edu<i></i>games<i></i>/on\<i></i>gmail</u>,
+  or better yet, if you wish, just add the new game yourself via a "pull request" on <a href="http://github.com/kernc/educative-games.tk">GitHub</a>. <kbd>:)</kbd>
 
   <!--script id='flattrbtn'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=kernc&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('flattrbtn');</script-->
 </section>
@@ -179,16 +182,29 @@ categories:
 {% for category in page.categories %}{% for game in category.games %}{% unless game.href %}{% capture slug %}{{ game.name | downcase | remove: "'" | remove: ':' | replace: ' ', '-' }}{% endcapture %}
 <section class="game">
   <h3 id="{{ category.name | downcase }}/{{ slug }}">{{ game.name }}</h3>
-  <p>{{ game.desc | markdownify }}</p>
+  {{ game.desc | markdownify }}
+
+  <section class="game-info" data-slug="{{ slug }}"
+                             data-swf="{% if game.swfhref %}{{ game.swfhref }}{% else %}flash/{{ slug }}.swf{% endif %}"
+                             data-height="{{ game.height }}"></section>
+  
+<!--
   <div id="{{ slug }}-swf"></div>
   <script> embedSWF('{% if game.swfhref %}{{ game.swfhref }}{% else %}flash/{{ slug }}.swf{% endif %}', '{{ slug }}-swf', '{{ game.height }}'); </script>
-  <!--script src="https://apis.google.com/js/plusone.js"></script>
-  <div class="g-comments"
-      data-href="/#{{ category.name | downcase }}/{{ slug }}"
-      data-width="400"
-      data-first_party_property="BLOGGER"
-      data-view_type="FILTERED_POSTMOD">
-  </div-->
+-->
+  
+  <!--div class="comments left">
+    <div class="g-comments"
+        data-href="/#{{ category.name | downcase }}/{{ slug }}"
+        data-width="390"
+        data-style="float:left"
+        data-first_party_property="BLOGGER"
+        data-view_type="FILTERED_POSTMOD"></div>
+  </div>
+  <div class="comments right">
+    <div class="fb-comments" data-href="/#{{ category.name | downcase }}/{{ slug }}" data-width="390"></div>
+  </div>
+  <div class="clear"/-->
 </section>
 {% endunless %}{% endfor %}{% endfor %}
 
@@ -197,6 +213,9 @@ categories:
   <a href="http://www.kongregate.com"><img alt="Kongregate" src="http://cdn1.kongcdn.com/images/sharedassets/badge88x31red.gif"/></a>
   <a href="http://armorgames.com" title="Sponsor of light-Bot game"><img alt="ArmorGames" src="http://cache.armorgames.com/files/banners/banner-20.jpg"/></a>
 </footer>
+
+<script src="https://apis.google.com/js/plusone.js">{parsetags: 'explicit'}</script>
+<script src="https://connect.facebook.net/en_US/all.js#xfbml=1&appId=151440601730621"></script>
 <script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-43663477-1']);

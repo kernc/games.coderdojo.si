@@ -8,6 +8,10 @@ body {
   src: url(khand.woff);
 }
 
+.clear {clear:both}
+.left {float:left}
+.right {float:right}
+
 /* HEADER */
 
 header {
@@ -36,6 +40,10 @@ header span {
   letter-spacing:1px;
   padding-bottom:10px;
   display:block;
+}
+header .sharing {
+  width:700px;
+  padding-bottom:8px;
 }
 
 
@@ -184,3 +192,13 @@ section.game {
 section.game h3 {
   margin-top:0px;
 }
+
+.comments {
+  margin-top: 10px;
+  width:400px;
+  text-align:center;
+}
+.comments div:first-child {margin-bottom:10px}
+
+.sharing {text-align:center;width:800px;}
+.sharing > * {float:inline-block !important;}
