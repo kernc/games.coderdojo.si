@@ -32,9 +32,8 @@ function game(id) {
   if (info.length > 0) {
     info.html('<div id="swfplayer"></div>')
     embedSWF(info.data('swf'), info.data('height'));
-    //$('body').animate({scrollTop: $(section).offset().top}, 1000);
-    //window.location.assign(id);
-    //alert(window.location);
+    $('body').animate({scrollTop: $(section).offset().top}, 1000);
+    window.location.assign(id);  // ?
     _gaq.push(['_trackPageview', '/' + id]);
     info.append('<div class="sharing"><div class="fb-like" data-href="' + window.location + '" data-width="120" data-send="false" data-layout="button_count" data-show-faces="false" data-ref="site-undervid"></div> <div class="g-plusone" data-size="medium" data-width="120"/></div></div>')
     info.append('<div class="comments left"><div id="g-comments"></div></div> \
@@ -57,7 +56,10 @@ function embedSWF (swf, height) {
   swfobject.embedSWF(swf, 'swfplayer', 800, height, '11.0.0', false, {}, {wmode:'opaque', bgcolor:'#eeeeee', base:'flash/'}, {});
 }
 
-window.onhashchange = function() {
-  if ($(window.location.hash.replace('/', '\\/')).length > 0)
-    game(window.location.hash);
-}
+/* This, as is, runs game() twice (once on A-click and once for hash change).
+ * Without it, manual URL location updates aren't honored.
+ */
+//~ window.onhashchange = function() {
+  //~ if ($(window.location.hash.replace('/', '\\/')).length > 0)
+    //~ game(window.location.hash);
+//~ }
