@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lesson SYSTEM "lesson.dtd">
+<lesson>
+
+<page graphic="example0">In this game you have to mix three colours to produce a target colour. There are two parts: light and paint.</page>
+<page graphic="example0">In the first part, light, you control the brightness of three spotlights - red, green and blue. Mixing different amounts of these three primary colours can make every other colour.</page>
+<page graphic="example0" frame="5">Here, a red colour is made of just red light.</page>
+<page graphic="example0" frame="10">Here, we make yellow from a mixture of red and green light.
+Red and blue light make magenta (pink).
+Green and blue light make cyan (turquoise).</page>
+<page graphic="example0" frame="25">Equal amounts of all three colours at maximum brightness (100%) will produce white light, or grey if the brightness is lowered.</page>
+<page graphic="example0" frame="20">You get pale or dull colours if the brightness of all three spotlights is almost the same. Here the green is slightly brighter than the red and blue.</page>
+<page graphic="example0" frame="15">The darker a colour, the less light is used - so the lower the brightness level of the spotlight.</page>
+
+<page graphic="example1">Use the sliders to change the brightness of the red, green and blue spotlights. When the colour of the central triangle matches the target, you've won.
+If you need help click the 'Hint' button.</page>
+
+<page graphic="example2" frame="0">In the second part, we use splodges of paint rather than light. Paint is a bit different to light. Its colour depends on which colours it absorbs and which colours it reflects. We see the colours an object reflects.</page>
+<page graphic="example2" frame="5">Each paint colour is the opposite of a light colour. 
+Magenta paint reflects red and blue light and absorbs green light.Yellow paint reflects red and green light and absorbs blue light. Cyan paint reflects green and blue light and absorbs red light.</page>
+<page graphic="example2" frame="10">The three basic colours used in paints are magenta, yellow and cyan. By mixing these colours we can make all other colours.
+A mixture of cyan and yellow paint reflects only green light and appears green.</page>
+<page graphic="example2" frame="12">A mixture of cyan and magenta is blue.
+A mixture of magenta and yellow is red.</page>
+<page graphic="example2" frame="15">A mixture of equal amounts of all three colours absorbs all three primary colours and is therefore grey or black.</page>
+
+
+
+</lesson>

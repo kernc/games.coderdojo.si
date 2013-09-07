@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE lesson SYSTEM "lesson.dtd">
+
+<lesson>
+
+<page graphic="example0">In every ecosystem there is a food chain. In the food chain, species can be consumers (who eat other species), or producers (who are eaten by other species) or both. In this game, there is a simple food chain of foxes, rabbits and plants.</page> 
+
+<page graphic="example1">Foxes eat rabbits, so they are consumers.</page> 
+ 
+<page graphic="example2">Rabbits are eaten by foxes, but they also eat plants, so they are both consumers and producers.</page> 
+ 
+<page graphic="example3">Plants are eaten by rabbits,  they are producers.</page> 
+  
+<page graphic="example4">The populations depend on each other: For example, if there are lots of foxes, then the rabbits will be eaten quickly...</page> 
+
+<page graphic="example5">...but this will mean there will soon be fewer rabbits, so the foxes will have less to feed on...</page> 
+
+<page graphic="example6">...so the fox population goes down. With less foxes to hunt them, the rabbits numbers can increase....</page> 
+
+<page graphic="example7">...so the foxes will have more to eat, and their population will grow again. So we get linked cycles of population growth and decline.</page> 
+  
+<page graphic="example8">In this game, you set up a food chain of plants, rabbits and foxes within an ecosystem, by using the [+] and [-] controls to set up the initial populations. Then you click 'Start Game', and the game will simulate 50 years of the changes in populations within an ecosystem.</page> 
+  
+<page graphic="example9">The graphs and biomass pyramid will help show how the populations are changing. The aim is to set up the populations to be as stable as possible . Very unstable populations can result in the extinction of a species, so be careful! If the populations survive after 50 years, you'll get a score out of 100.</page> 
+
+</lesson>

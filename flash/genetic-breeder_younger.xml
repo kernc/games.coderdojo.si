@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lesson SYSTEM "lesson.dtd">
+<lesson>
+
+<page graphic="example1">Over 100 hundred years ago, there was a Swiss Monk who took an interest in the peas that he was growing as part of his daily work. The work he did, and the discoveries he made are the basis for the theories of inheritance which we have today. You can simulate his experiments with this game, but it won't take you nearly as long! His name, by the way, was Gregor Mendel.</page>
+
+<page graphic="example0">All living organisms inherit characteristics from their parents. Each of us has a combination of features from our parents.
+Mendel spotted this in his pea plants. He decided to try breeding plants with particular features with each other.</page>
+
+<page graphic="example2">The characteristics which Mendel found could be seen easily in pea plants included:</page>
+
+<page graphic="example3">There is a gene for each of these characteristics, but the genes come in different forms. Each form of a gene is called an allele. Any individual has 2 alleles for each gene.
+A plant with two alleles the same is called a Homozygote. 2 alleles for pink colour will give a pink flower; 2 alleles for white will give a white flower.</page>
+
+<page graphic="example4">A plant with different alleles is called a heterozygote. What is the result? In peas, this gives a pink flower.
+In fact pink alleles are stronger or 'dominant', and white alleles are weaker or 'recessive'.</page>
+
+<page graphic="example5">When organisms reproduce, each parent can only pass one of its alleles for a characteristic to its offspring. Which allele is passed on is completely random, but the chance for each one to be passed on is equal (50/50). Here two different homozygote parents pass on one of their alleles on, making a heterozygote child.</page>
+
+<page graphic="example5" frame="5">Random mixing of alleles in the next generation can produce interesting results. A pea plant which receives a recessive white allele from each of its heterozygote parents will be white even though they are both pink.</page>
+
+<page graphic="example7">In this game, you are given two random flowers and a target flower. The idea is to breed as many flowers with the same characteristics as the target. You start having to match two characteristics (flower colour and pea colour), as you progress through the levels, you will be given more characteristics to match. You must create 12 or more matching flowers to complete a level.</page>
+
+<page graphic="example8">To breed two flowers, click on one parent, then the other. Four children will be produced. You can breed from the same flower more than once, and you can even cross-breed a flower with itself - just click it twice.
+The game will fade away any flowers that aren't a direct ancestor of the current generation, to make it easier to see - don't worry, you can still breed from any flower at any time.</page>
+
+<page graphic="example9">If you hover your mouse over the plant, its alleles will appear, so you can plan your breeding more effectively.</page>
+
+<page graphic="genesguide">The table on the left tells you what alleles each characteristic has, and which one is dominant.
+If you need a reminder, you can display this table on the screen during the game using the 'Genes Guide' button.
+Click on 'Start Game' to start the game.</page>
+
+</lesson>

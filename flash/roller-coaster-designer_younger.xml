@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lesson SYSTEM "lesson.dtd">
+<lesson>
+<page graphic="example0">This is a game where you can design your own roller-coaster.</page>
+<page graphic="example1">Roller-coasters are trains that run along rising and falling tracks. The trains are pulled up to the highest point and then allowed to run down the track, powered by nothing other than gravity.</page>
+<page graphic="example2">In an upward turn the roller-coaster is forced to change direction. The force on the train makes the passengers feel much heavier than normal.</page>
+<page graphic="example3">Similarly, in a downward turn the roller-coaster is pulled downwards by the track.</page>
+<page graphic="example4">The size of the forces felt in the turns is what makes the roller-coaster exciting to the passengers. Quick turns in either direction will make the passengers feel heavy and cause a rush of excitement.</page>
+<page graphic="example5">Too much force may make the passenger sick, or even pass out, as it restricts the flow of blood inside the body.</page>
+<page graphic="example6">When designing your roller-coaster, bear in mind the force at each point. The tighter the curve, the higher the acceleration. But don't go too far - a force of more than 5 times your own weight in the turn is considered harmful.</page>
+<page graphic="example7">You will get points for your course - the higher the forces your passengers experience safely, the more points you will get. But if your passengers become ill or pass out, you will lose points.</page>
+<page>Remember, the train will slow down slightly due to friction as it runs along the track. The height of the hills it can climb will therefore get smaller - it can never go higher than the starting point!</page>
+<page graphic="example8">To design your roller-coaster, drag the grey boxes up and down to change the bends of the track, then click 'Test' to try out your design.</page>
+<page>You start with a simple roller-coaster, if you get enough points you will progress to the next level. The higher the level, the bigger and steeper your roller-coaster can become.</page>
+</lesson>

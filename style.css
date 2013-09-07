@@ -192,6 +192,17 @@ section.game {
 }
 section.game h3 {
   margin-top:0px;
+  border-bottom: 1px solid silver;
+}
+
+section.game ul {
+  list-style-type:square;
+  font-size:0.8em;
+  padding-left:20px;
+}
+
+section.game ul p {
+  margin:0px;
 }
 
 .comments {
@@ -203,3 +214,11 @@ section.game h3 {
 
 .sharing {text-align:center;width:800px;}
 .sharing > * {float:inline-block !important;}
+
+footer, .center {
+  text-align:center;
+}
+
+
+/* ABOUT SECTION */
+

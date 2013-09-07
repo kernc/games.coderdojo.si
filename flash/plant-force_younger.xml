@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lesson SYSTEM "lesson.dtd">
+<lesson>
+  <page graphic="example0" frame="1">You are working for a plant development company - they have produced a new variety of super-crop, but they now need you to find out the optimum conditions for its growth - can it be grown commercially and generate a good profit? You will need to find out the best light and water inputs for the crop for the first 10 weeks of its life - but remember all of the water and light costs money!</page> 
+  <page graphic="example1" frame="1">Heat and water are essential to plants. Without water, a plant cannot take up nutrients through its roots, nor carry out photosynthesis.  A lack of water will lead to wilting as cells lose their turgidity. Too much water leads to water logging and inhibits respiration in the roots.</page> 
+  <page graphic="example2" frame="1">Temperature will affect the rates of photosynthesis and respiration, since they are chemical reactions controlled by enzymes.  If temperatures are too high, then transpiration may be very rapid and lead to wilting and eventually dehydration and death of the plant.</page> 
+  <page graphic="example3" frame="1">You must supply an ideal amount of heat and water to the plant over 10 weeks. But you must be careful - water and heat both cost money, so you must find the right balance. The bigger the plant, and the more flowers it grows, the higher its value. Your plant's value must be more than the total cost of the heat and water to make a profit.</page> 
+  <page graphic="example4" frame="1">The plants' needs may change over time.   Consider the changing needs of the plant as it germinates, grows its first leaves and then matures.  At the start, the weak seedling plant may need more heat but as it grows, it may actually suffer if the temperature is too high. </page> 
+  <page graphic="example5" frame="1">As the plant grows, it may require more water - think about the total surface area of its leaves.</page> 
+  <page graphic="example6" frame="1">Use the controls to alter the temperature and amount of water, and then progress by clicking the 'Next Week' button.</page> 
+  <page graphic="example7" frame="1">A graph will monitor your progress and costs over time.</page> 
+  <page graphic="example8" frame="1">Once the 10 weeks are up, or you have grown a full-size plant, you'll be given the option to retry your experiment, or grow a whole crop of the plants under the same conditions, and see if they make a profit or not.</page> 
+</lesson>
