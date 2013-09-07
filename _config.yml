@@ -1,0 +1,4 @@
+source:      .
+destination: ./_site
+exclude:     ['_exclude']
+markdown:    redcarpet
