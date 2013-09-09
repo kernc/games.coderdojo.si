@@ -67,8 +67,8 @@
   story-type games, suitable for even younger children</b>, check out the following websites too.
   <h3 id="similar_sites">Similar sites</h3>
   <ul id="other_sites">{% for site in page.other_sites %}
-  <li><a href="{{ site.href }}">{% if site.name %}{{ site.name | markdownify }}{% else %}{{ site.href }}{% endif %}</a>{{ site.desc | markdownify }}</li>{% endfor %}
-  </ul></ins></p>
+  <li>{{ site.name | markdownify }} {{ site.desc | markdownify }}</li>{% endfor %}
+  </ul>
   <p>If you <b>have a suggestion</b> for an educative game or even a whole new category, <b>write a comment</b> below, or better yet, if you wish,
   just add the new game(s) yourself via a "pull request" on <a href="http://github.com/kernc/educative-games.org">GitHub</a>. <kbd>:)</kbd></p>
   <p><b>BTYB —</b> {% for c in page.contributors %}<a href="{{ c.href }}">{{ c.name }}</a>{% unless forloop.last %},{% endunless %} {% endfor %}</p>
@@ -96,7 +96,7 @@
 </footer>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
-<script src="https://connect.facebook.net/en_US/all.js#xfbml=1&appId=151440601730621"></script>
+<script src="https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=151440601730621"></script>
 <script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-43663477-1']);
