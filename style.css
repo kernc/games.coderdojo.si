@@ -11,6 +11,9 @@ body {
 .clear {clear:both}
 .left {float:left}
 .right {float:right}
+.center {text-align:center}
+.bold {font-weight:bold}
+.red {color:red}
 
 /* HEADER */
 
@@ -31,8 +34,8 @@ header > h1 a {
   color:#8e8;
   text-decoration:none;
 }
-header > h2 {
-  margin-left:5%;
+header h2 {
+  #margin-left:5%;
   margin-top:-10px;
   color:#7d0;
   font-family:sans-serif;
@@ -42,9 +45,11 @@ header > h2 {
   padding-bottom:0px;
   display:block;
 }
-header > .sharing {
-  width:700px;
-  padding-bottom:10px;
+header .sharing {
+  width:240px;
+  position:relative;
+  top:-30px;
+  #padding-bottom:10px;
 }
 
 
