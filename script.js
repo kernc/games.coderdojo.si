@@ -1,25 +1,36 @@
-$(document).ready(function() {
-  hide_all();
-  var current = $(window.location.hash.replace('/', '\\/'));
-  if (current.length > 0) {
-    //window.location.assign('#' + current.attr('id'));
-    onhashchange();
-  } else window.location.hash = '#about';
-  
-  $('#nav a[href^="http"]').css('background-image', function (index, value) {
-    return "url('images/new-window.png'), " + value;
+function preinit() {
+  try {
+    jQuery;
+    init();
+  } catch (err) {
+    setTimeout(preinit, 10);
+  }
+}
+
+function init() {
+  $(document).ready(function() {
+    hide_all();
+    var current = $(window.location.hash.replace('/', '\\/'));
+    if (current.length > 0) {
+      //window.location.assign('#' + current.attr('id'));
+      onhashchange();
+    } else window.location.hash = '#about';
+    
+    $('#nav a[href^="http"]').css('background-image', function (index, value) {
+      return "url('images/new-window.png'), " + value;
+    });
+    $('a[href^="http"]').attr('target', '_blank');
+    
+    $('#nav a[href^="#"]').click(function() {
+      window.location.assign($(this).attr('href'));
+      window.submenu = $(this).parents('.submenu');
+      window.submenu.addClass('submenu-hide').removeClass('submenu');
+      setTimeout(function() {
+        window.submenu.addClass('submenu').removeClass('submenu-hide');
+      }, 500);
+    });
   });
-  $('a[href^="http"]').attr('target', '_blank');
-  
-  $('#nav a[href^="#"]').click(function() {
-    window.location.assign($(this).attr('href'));
-    window.submenu = $(this).parents('.submenu');
-    window.submenu.addClass('submenu-hide').removeClass('submenu');
-    setTimeout(function() {
-      window.submenu.addClass('submenu').removeClass('submenu-hide');
-    }, 500);
-  });
-});
+}
 function hide_all() {
   $('section.game').hide(0).children('.game-info').html('');
 }
@@ -62,3 +73,4 @@ window.onhashchange = function() {
     return
   }
 }
+preinit();
