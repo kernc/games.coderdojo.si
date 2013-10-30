@@ -59,7 +59,7 @@ window.onhashchange = function() {
       gameinfo.append('<div class="sharing"><div class="fb-like" data-href="' + window.location + '" data-width="120" data-send="false" data-layout="button_count" data-show-faces="false" data-ref="site-undervid"></div> <div class="g-plusone" data-size="medium" data-width="120"/></div></div>')
       gameinfo.append('<div class="comments left"><div id="g-comments"></div></div> \
       <div class="comments right"> \
-        <div class="fb-comments" data-href="/' + id + '" data-width="390"></div> \
+        <div class="fb-comments" data-href="' + window.location + '" data-width="390"></div> \
       </div><div class="clear"/>');
       gapi.comments.render('g-comments', {
         href: window.location,
