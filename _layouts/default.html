@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Educative-Games.org — Learn through play</title>
-<meta name="description" content="Free-for-all educative games you wish your kids to play in order to learn more about various fields of science."/>
-<!--[if lt IE 9]><script async="true" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script><![endif]-->
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.min.css"/>
+<title>Games.CoderDojo.si — Learn through play</title>
+<meta name="description" content="Free-for-all educational games you wish your kids to play in order to learn more about various fields of science."/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.min.css"/>
 <link rel="stylesheet" href="style.css"/>
 <meta property="fb:app_id" content="151440601730621"/>
 </head>
 <body>
 <div id="fb-root"></div>
 <header>
-  <h1><b><a href="/">Educative-Games.org</a></b></h1>
+  <h1><b><a href="/">Games.CoderDojo.si</a></b></h1>
   <div style="width:800px">
-    <h2 class="center">Free-for-all <b><em>educative games</em> you wish <em>the kids</em> to play</b><br/> in order to teach themselves science <br/>and <b><em>learn</em> more about</b> ...</h2>
+    <h2 class="center">Free-for-all <b><em>educational games</em> you wish <em>the kids</em> to play</b><br/> in order to teach themselves science <br/>and <b><em>learn</em> more about</b> ...</h2>
     <div class="sharing left">
       <div class="fb-like"   data-width="120" data-href="http://educative-games.org/" data-layout="button_count" data-show-faces="false" data-send="false" data-ref="site-title"></div>
       <div class="g-plusone" data-width="120" data-href="http://educative-games.org/" data-size="medium"></div>
@@ -43,7 +42,7 @@
 
 <section class="game about">
   <h3 id="about">About this site</h3>
-  <p>Gathering up useful resources for <a href="http://www.coderdojo.si">Slovenian</a> <a href="http://en.wikipedia.org/wiki/CoderDojo">CoderDojo</a> course,
+  <p>Gathering up useful resources for <a href="http://www.coderdojo.si">Slovenian</a> <a href="https://en.wikipedia.org/wiki/CoderDojo">CoderDojo</a> course,
   one of us stumbled upon <a href="#programming/light-bot-2">light-Bot 2</a> and <a href="http://www.robozzle.com">RoboZZle</a> at
   <b>HappyNerds' wonderful collection of <a href="http://happynerds.net/view/browser">programming resources for kids</a></b>.</p>
   <p>One game led to the other, and — after a few days of ecstatic playing — I figured I would make the job easier for
@@ -55,21 +54,21 @@
   <p>Find the games in the <a href="#menu">menu above</a>. Most games require <span class="red">Adobe Flash</span>, others are
   links to their respective websites. <noscript class="bold red">The <u>page requires JavaScript</u> enabled.</noscript></p>
   
-  <p>Seeking more educative material, search for
+  <p>Seeking more educational material, search for
   <a href="http://www.google.com/search?q=educational+games">"educational games"</a>
   online, and compare <a href="#menu">our selection of games</a> with your findings or the more varied selection on major established sites like
-  <a rel="nofollow" href="http://www.newgrounds.com/games/">Newgrounds</a> or
-  <a rel="nofollow" href="http://www.kongregate.com/">Kongregate</a>. You might find
+  <a href="https://www.newgrounds.com/games/">Newgrounds</a> or
+  <a href="https://www.kongregate.com/">Kongregate</a>. You might find
   the state of affairs quite sad, or at least that good, fun <b>games that actually teach something</b> are relatively hard to find.
-  Here are some other sites we found that list games, more or less educative in various fields.
+  Here are some other sites we found that list games, more or less educational in various fields.
   The most satisfying of those should have been collected in the <a href="#menu">menu above</a>, but for more <b>interactive,
   story-type games, suitable for even younger children</b>, check out the following websites too.
   <h3 id="similar_sites">Similar sites</h3>
   <ul id="other_sites">{% for site in page.other_sites %}
   <li>{{ site.name | markdownify }} {{ site.desc | markdownify }}</li>{% endfor %}
   </ul>
-  <p>If you <b>have a suggestion</b> for an educative game or even a whole new category, <b>write a comment</b> below, or better yet, if you wish,
-  just add the new game(s) yourself via a "pull request" on <a href="http://github.com/kernc/educative-games.org">GitHub</a>. <kbd>:)</kbd></p>
+  <p>If you <b>have a suggestion</b> for an educational game or even a whole new category, <b>write a comment</b> below, or better yet, if you wish,
+  just add the new game(s) yourself via a "pull request" on <a href="https://github.com/kernc/games.coderdojo.si">GitHub</a>. <kbd>:)</kbd></p>
   <p><b>BTYB —</b> {% for c in page.contributors %}<a href="{{ c.href }}">{{ c.name }}</a>{% unless forloop.last %},{% endunless %} {% endfor %}</p>
   <h3>TODO</h3><ul>
     <li>Add to games' descriptions where there are none or insufficient.</li>
@@ -90,25 +89,21 @@
 {% endunless %}{% endfor %}{% endfor %}
 
 <footer>
-  <a class="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="CC BY-NC-SA" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
-  <!--[if IE]><a href="http://affiliates.mozilla.org/link/banner/44894"><img src="images/firefox.png" alt="Upgrade to Firefox browser"/></a><![endif]-->
+  <a class="copyright" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="CC BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a>
   <div style="font-size:0.7em;">Anyone imposing 'rights' upon one's work is deluded. There are no rights. Cf. the United States of America.</div>
 </footer>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8E0FZ2F9K4"></script>
 <script>
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-43663477-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8E0FZ2F9K4');
 </script>
 <script async="true" src="https://apis.google.com/js/plusone.js"></script>
 <script async="true" src="https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=151440601730621"></script>
-<script async="true" src="http://cdnjs.cloudflare.com/ajax/libs/swfobject/2.2/swfobject.min.js"></script>
-<script async="true" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script async="true" src="https://cdnjs.cloudflare.com/ajax/libs/swfobject/2.2/swfobject.min.js"></script>
+<script async="true" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script async="true" src="script.js"></script>
 </body>
 </html>
